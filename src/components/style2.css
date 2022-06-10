@@ -1,0 +1,105 @@
+.grid-container {
+    display: grid;
+    font-size: 11px;
+}
+
+.calculator-container {
+    grid-column-start: 2;
+    grid-column-end: five;
+    grid-row-start: row1-start;
+    grid-row-end: 3;
+}
+
+.input-output-container {
+    /*enables flex on the input-container and output-container*/
+    display: flex;
+    flex-direction: row;
+}
+
+.input-container {
+    /*creates column 1 for the inputs in the calculator*/
+    /*input-fields-container will also wrap this container, to create a straight column for the input fields*/
+    order: 1;
+    text-align: left;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.output-container {
+    /*creates column 2 for the outputs in the calculator*/
+    /*output-fields-container will also wrap this container, to create a straight column for the output fields*/
+    order: 2;
+    text-align: left;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+legend {
+    text-align: center;
+}
+
+label {
+    padding-right: 20px;
+}
+
+input {
+    float: right;
+    clear: both;
+    width: 80px;
+}
+
+output {
+    float: right;
+    clear: both;
+}
+
+fieldset {
+    width: 60%;
+    margin-left: 20%;
+}
+
+h3 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+    fieldset {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .grid-container {
+        display: flex;
+        font-size: 8px;
+        justify-content: center;
+    }
+
+    .input-output-container {
+        flex-direction: column;
+    }
+
+    .input-container {
+        order: 1;
+        justify-content: space-evenly;
+        padding-bottom: 15px;
+    }
+    .output-container {
+        padding-top: 15px;
+        padding-left: 0;
+        padding-bottom: 15px;
+        order:2;
+        justify-content: space-evenly;
+        border-top: 3px solid #eee;
+    }
+
+    input {
+        padding-left: 10px;
+    }
+
+
+}
